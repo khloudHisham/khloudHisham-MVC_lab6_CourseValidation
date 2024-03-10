@@ -1,0 +1,14 @@
+﻿@model lab2MVC.ViewModels.CourseResultViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Result</title>
+</head>
+<body>
+    <h1>Course Result</h1>
+    <p><strong>Course Name:</strong> @Model.CourseName</p>
+    <p><strong>Trainee Name:</strong> @Model.TraineeName</p>
+    <p><strong>Degree:</strong> <span style="color: @Model.Color.ToLower()">@Model.Degree</span></p>
+</body>
+</html>

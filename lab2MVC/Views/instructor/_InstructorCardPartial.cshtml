@@ -1,0 +1,10 @@
+﻿<div class="card">
+    <img src="~/images/@Model.ImageURl" class="card-img-top" alt="Instructor Image">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text"><strong>ID:</strong> @Model.Id</p>
+        <p class="card-text"><strong>Salary:</strong> @Model.Salary</p>
+        <p class="card-text"><strong>Address:</strong> @Model.Address</p>
+        <a href="@Url.Action("Index", "Instructor")" class="btn btn-dark"style="font-weight:bold">Back to List</a>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model lab2MVC.ViewModels.TraineeResultViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trainee Result</title>
+</head>
+<body>
+    <h1>Trainee Result</h1>
+    <h2>Trainee ID: @Model.TraineeId</h2>
+
+    <table border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Degree</th>
+        </tr>
+        @foreach (var courseResult in Model.CourseResults)
+        {
+            <tr>
+                <td>@courseResult.CourseName</td>
+                <td style="color: @courseResult.Color.ToLower()">@courseResult.Degree</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

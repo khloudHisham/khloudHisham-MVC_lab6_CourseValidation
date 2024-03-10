@@ -1,0 +1,52 @@
+﻿<style>
+    .details-link {
+        color: palevioletred;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+@model List<instructor>
+@{
+    Layout = "_AdvLayout";
+
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>All Instructors </h1>
+
+
+<br />
+<br/>
+<a href="/Instructor/New" class="btn btn-warning" style="width:100px;margin:5px;font-weight:bold;">New</a>
+
+
+<table  class="table table-bordered table-hover">
+    <tr>
+       <th>Id </th>
+        <th>Name </th>
+        <th>Salary </th>
+        <th>Address </th>
+        <th>Image </th>
+        
+        <th>Show Details </th>
+      
+
+    </tr>
+    @foreach (var item in Model)
+    {
+     <tr>
+         <td>@item.Id  </td>
+         <td>@item.Name </td>
+         <td>@item.Salary</td>
+         <td>@item.Address</td>
+        
+         <td><img src="~/images/@item.ImageURl" style="width:100px"></td>
+         
+         <td><a href="@Url.Action("ShowAll" ,"instructor",new{id=item.Id})" class="details-link">Details</a></td>
+        </tr>
+       
+
+    }
+</table>
